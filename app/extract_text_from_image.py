@@ -1,4 +1,4 @@
-from app.config import base_url, ocr_model, judge_model, api_key
+from app.config import base_url, ocr_model, api_key, ocr_max_tokens
 from openai import OpenAI
 import base64
 
@@ -66,7 +66,7 @@ def extract_text_from_image(image_path):
     params = {
         "model": ocr_model,
         "messages": messages,
-        "max_tokens": 512
+        "max_tokens": ocr_max_tokens
     }
     # 调用OpenAI客户端的chat.completions.create方法，传入参数
     result = client.chat.completions.create(**params)
