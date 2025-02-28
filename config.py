@@ -27,3 +27,8 @@ ocr_max_tokens=512
 # 题目批改时的最大token数
 # 如果在题目批改时发现结果不完整，可以尝试增加此值。
 judge_max_tokens=512
+# 自动保存间隔（秒）
+autosave_interval=60
+# 版本号
+# 请勿更改。
+version="1.0-dev"

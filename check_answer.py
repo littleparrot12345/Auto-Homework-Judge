@@ -3,29 +3,7 @@ from config import base_url, judge_model, api_key, judge_max_tokens
 from openai import OpenAI
 
 def check_answer(image_path, answer, problem_count):
-    """
-    根据给定的图像路径和答案，使用OpenAI的API判断解题过程是否正确。
-
-    参数:
-    image_path (str): 图像文件的路径。
-    answer (str): 用户的答案。
-    problem_count (int): 题目的数量。
-
-    返回:
-    str: OpenAI返回的判断结果，格式为JSON字符串。
-
-    具体步骤:
-    1. 从图像中提取文本。
-    2. 创建OpenAI客户端实例，使用提供的API密钥和基础URL。
-    3. 构造示例JSON格式，用于指导OpenAI生成响应。
-    4. 构造请求消息，包含题目数量、解题过程和答案。
-    5. 设置请求参数，包括模型、消息和最大令牌数。
-    6. 发送请求并获取响应。
-    7. 返回响应中的消息内容。
-    """
-    # 从图像中提取文本
     text = extract_text_from_image(image_path)
-    # 创建OpenAI客户端实例，使用提供的API密钥和基础URL
     cilent = OpenAI(api_key=api_key, base_url=base_url)
     example="""[{"analysis":"题目1的解题过程正确。","status":"AC"},
 {"analysis":"题目2的解题过程有误。解答不完整。","status":"WA"},
