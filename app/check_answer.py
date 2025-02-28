@@ -1,5 +1,5 @@
 from extract_text_from_image import extract_text_from_image
-from app.config import base_url, judge_model, api_key, judge_max_tokens
+from config import base_url, judge_model, api_key, judge_max_tokens
 from openai import OpenAI
 
 def check_answer(image_path, answer, problem_count):
@@ -48,4 +48,6 @@ def check_answer(image_path, answer, problem_count):
     return response.choices[0].message.content
 
 if __name__ == "__main__":
-    print(check_answer("./app/test.jpg","（1）∠ABE=40°（2）∠BFD=(k-1)*300°/k或60°",2))
+    print("api_key:",api_key)
+    print(check_answer("./app/test.jpg",\
+                       "（1）∠M=22.5°（2.1）∠ABE=40°（2.2）∠BFD=(k-1)*300°/k或60°",3))

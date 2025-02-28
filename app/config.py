@@ -16,6 +16,7 @@ base_url="https://api.siliconflow.cn/v1"
 ocr_model="Qwen/Qwen2-VL-72B-Instruct"
 # 进行题目批改的模型名称
 # 建议使用DeepSeek-V3。如果使用其它模型，请自行修改。
+# 在测试时，默认模型每次调用需要0.0038元。
 # 注意：在未实名认证时，每天限制调用100次。
 # 如果在使用时经常遇到问题，可以更改为：
 # judge_model="Qwen/Qwen2.5-72B-Instruct"
