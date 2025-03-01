@@ -382,7 +382,7 @@ def main():
     if data["info"] == False:
         messagebox.showinfo("信息", 
                             """本软件是一个开源项目。
-项目地址：https://github.com/wby-lsfls/Auto-Homework-Judge""")
+项目地址：https://github.com/littleparrot12345/Auto-Homework-Judge""")
         data["info"] = True
     if data["lincense"] == False:
         messagebox.showwarning("警告", 
