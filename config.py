@@ -31,4 +31,4 @@ judge_max_tokens=512
 autosave_interval=60
 # 版本号
 # 请勿更改。
-version="1.0-dev"
+version="1.0"
