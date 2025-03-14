@@ -1,3 +1,4 @@
+# config.py
 # API Key
 # 推荐使用SiliconFlow API。获取方式：
 # 1.访问 https://cloud.siliconflow.cn/i/GvBaDbcJ 注册。

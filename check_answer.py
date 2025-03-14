@@ -1,19 +1,14 @@
+# check_answer.py
 from extract_text_from_image import extract_text_from_image
 from config import base_url, judge_model, api_key, judge_max_tokens
 from openai import OpenAI
 
 def extract_brackets_content(s):    # AI 不一定会严格输出JSON，所以需要手动提取
-    # 查找第一个 '[' 的位置
     start = s.find('[')
-    # 查找最后一个 ']' 的位置
     end = s.rfind(']')
-    
-    # 如果找到了 '[' 和 ']'，并且 '[' 在 ']' 之前
     if start != -1 and end != -1 and start < end:
-        # 返回从第一个 '[' 到最后一个 ']' 之间的内容（包括 '[' 和 ']'）
         return s[start:end + 1]
     else:
-        # 没有找到匹配的 '[' 和 ']'
         raise ValueError("No matching brackets found")
 
 def check_answer(image_path, answer, problem_count, logger=lambda x: print(x)):

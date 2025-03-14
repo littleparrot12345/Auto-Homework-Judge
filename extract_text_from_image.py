@@ -1,3 +1,4 @@
+# extract_text_from_image.py
 from config import base_url, ocr_model, api_key, ocr_max_tokens
 from openai import OpenAI
 import base64

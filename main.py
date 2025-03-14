@@ -1,3 +1,4 @@
+# main.py
 from check_answer import check_answer
 from config import version, autosave_interval, api_key
 from tkinter import *
